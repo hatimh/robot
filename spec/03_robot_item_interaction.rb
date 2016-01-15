@@ -42,8 +42,10 @@ describe Robot do
 
   describe "capacity" do
     it "can only carry a maximum of 250 lbs" do
+
       expect(@robot.pick_up(@max_weight_item)).to be_truthy
       expect(@robot.pick_up(@light_item)).to be_falsey
+     
       expect(@robot.items_weight).to eq(250)
     end
   end
